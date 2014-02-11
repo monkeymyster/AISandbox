@@ -1,0 +1,16 @@
+from subprocess import check_output
+
+
+
+def main():
+    command = "C:\Python27\python.exe \"C:\Users\Matt\Documents\The AI Sandbox\CaptureTheFlag\client.py\" --name completely_random challenge --challenge=ctf-operation-dragnet --level=map00"
+
+    for x in range(1, 11, 1):
+        output = check_output(command, shell=True)
+        print output
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception as e:
+        raise
